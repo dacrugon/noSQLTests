@@ -12,15 +12,13 @@ import java.time.LocalDateTime;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @Getter
 @Setter
-@Document(collection = "account")
-public class Account {
+@Document(collection = "pictures")
+public class Picture {
 
     @Id
     private String id;
-    private String fullName;
-    private String identityDocumentNumber;
-    private String identityDocumentType;
-    private String phoneNumber;
+    private Integer idPersona;
+    private String imageUrl;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdDate = LocalDateTime.now();

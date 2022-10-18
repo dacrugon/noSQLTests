@@ -1,30 +1,26 @@
 package com.todotic.apiaccount.services.Impl;
 
-import com.todotic.apiaccount.documents.Account;
-import com.todotic.apiaccount.repositories.IAccountRepository;
-import com.todotic.apiaccount.services.IAccountService;
+import com.todotic.apiaccount.documents.Picture;
+import com.todotic.apiaccount.repositories.IPictureRepository;
+import com.todotic.apiaccount.services.IPictureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class IAccountServiceImpl implements IAccountService {
+public class IAccountServiceImpl implements IPictureService {
 
     @Autowired
-    IAccountRepository repository;
-    @Override
-    public Account findByPhoneNumber(String phoneNumber) {
-        return repository.findByPhoneNumber(phoneNumber);
-    }
+    IPictureRepository repository;
 
     @Override
-    public List<Account> findAll() {
+    public List<Picture> findAll() {
         return repository.findAll();
     }
 
     @Override
-    public Account create(Account o) {
+    public Picture create(Picture o) {
         return repository.save(o);
     }
 }

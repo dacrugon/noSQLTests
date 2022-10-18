@@ -1,11 +1,11 @@
 package com.todotic.apiaccount.repositories;
 
-import com.todotic.apiaccount.documents.Account;
+import com.todotic.apiaccount.documents.Picture;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IAccountRepository extends MongoRepository<Account,String> {
+public interface IPictureRepository extends MongoRepository<Picture,String> {
 
-    public Account findByPhoneNumber(String id);
+
 }
